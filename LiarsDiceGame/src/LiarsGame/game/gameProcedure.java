@@ -2,29 +2,45 @@ package LiarsGame.game;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class gameProcedure {
-	
-	// storing first roll
+
 	private List<Die> diceRoll = new ArrayList<>();
-	
-	// 
 	private List<Integer> bet = new ArrayList<>();
-	
+
 	// Constructor for initializing Hand
 	public gameProcedure(int size) {
-		for(int count = 0; count < size; count++) {
+		for (int count = 0; count < size; count++) {
 			diceRoll.add(new Die());
 		}
 	}
-	
-	public List<Die> getDice(){
+
+	public List<Die> getDice() {
 		return diceRoll;
 	}
-	
-	public List<Integer> getBet(){
+
+	// able to roll once
+	public void roll(Random rand, int choice) {
+		diceRoll.get(choice).Roll(rand);
+	}
+
+	// able to roll more then once
+	public void roll(Random rand, List<Integer> choices) {
+		for (int choice : choices) {
+			roll(rand, choice);
+		}
+	}
+
+	// all dice can be rolled
+	public void roll(Random rand) {
+		for (Die dice : diceRoll) {
+			dice.Roll(rand);
+		}
+	}
+
+	public List<Integer> getBet() {
 		return bet;
 	}
-	
-	
+
 }
