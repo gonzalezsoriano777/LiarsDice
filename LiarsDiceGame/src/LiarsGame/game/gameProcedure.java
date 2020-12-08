@@ -18,5 +18,13 @@ public class gameProcedure {
 		}
 	}
 	
+	public List<Die> getDice(){
+		return diceRoll;
+	}
+	
+	public List<Integer> getBet(){
+		return bet;
+	}
+	
 	
 }
