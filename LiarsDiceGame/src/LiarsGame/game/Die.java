@@ -6,6 +6,10 @@ public class Die {
 
 	private int sides = 6;
 	private int value = 1;
+	
+	public Die() {
+		
+	}
 
 	public void Roll(Random rand) {
 		value = rand.nextInt(sides) + 1;
