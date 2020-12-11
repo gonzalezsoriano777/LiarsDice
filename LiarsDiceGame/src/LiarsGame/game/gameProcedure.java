@@ -39,8 +39,24 @@ public class gameProcedure {
 		}
 	}
 
+	public void cupDisplay(String choice) {
+		String displayDice = "";
+	}
+
 	public List<Integer> getBet() {
 		return bet;
+	}
+
+	// Once concluded.. Printing die to screen
+	public String toString() {
+
+		String dieOutput = "";
+		for (var die : diceRoll) {
+			dieOutput = +die.getValue() + " ";
+		}
+
+		return dieOutput.trim();
+
 	}
 
 }
