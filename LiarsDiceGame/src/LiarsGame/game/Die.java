@@ -21,7 +21,6 @@ public class Die {
 
 	@Override
 	public String toString() {
-
 		return "" + value;
 
 	}

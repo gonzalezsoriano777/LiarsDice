@@ -50,6 +50,7 @@ public class gameProcedure {
 	// Once concluded.. Printing die to screen
 	public String toString() {
 
+		
 		String dieOutput = "";
 		for (var die : diceRoll) {
 			dieOutput = +die.getValue() + " ";
